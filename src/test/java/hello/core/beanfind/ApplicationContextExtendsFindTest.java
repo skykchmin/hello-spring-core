@@ -19,13 +19,13 @@ public class ApplicationContextExtendsFindTest {
 
     AnnotationConfigApplicationContext ac = new AnnotationConfigApplicationContext(TestConfig.class);
 
-    @Test
-    @DisplayName("부모 타입으로 조회시, 자식이 둘 이상 있으면, 중복 오류가 발생한다")
-    void findBeanByParentTypeDulicate(){
-        DiscountPolicy bean = ac.getBean(DiscountPolicy.class);
-        assertThrows(NoUniqueBeanDefinitionException.class,
-                () -> ac.getBean(DiscountPolicy.class));
-    }
+//    @Test
+//    @DisplayName("부모 타입으로 조회시, 자식이 둘 이상 있으면, 중복 오류가 발생한다")
+//    void findBeanByParentTypeDulicate(){
+//        DiscountPolicy bean = ac.getBean(DiscountPolicy.class);
+//        assertThrows(NoUniqueBeanDefinitionException.class,
+//                () -> ac.getBean(DiscountPolicy.class));
+//    }
 
     // #1
     @Test
